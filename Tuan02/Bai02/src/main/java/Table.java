@@ -28,8 +28,12 @@ public class Table implements MenuComponent {
     }
 
     @Override
-    public String getName() {
-        return "Table " + tableNumber;
+    public void getName() {
+        System.out.println("Table " + tableNumber);
+        System.out.println("Order:");
+        for (MenuComponent item : items) {
+            item.getName();
+        }
     }
 
     public List<MenuComponent> getItems() {

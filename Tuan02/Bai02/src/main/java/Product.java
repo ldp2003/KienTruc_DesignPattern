@@ -13,7 +13,7 @@ public class Product implements MenuComponent {
     }
 
     @Override
-    public String getName() {
-        return name;
+    public void getName() {
+        System.out.println(name);
     }
 }

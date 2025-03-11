@@ -18,7 +18,9 @@ public class Main {
         coffeeShop.addTable(table1);
         coffeeShop.addTable(table2);
 
+        table1.getName();
         System.out.println("Table 1 total: " + table1.getPrice() + " VND");
+        table2.getName();
         System.out.println("Table 2 total: " + table2.getPrice() + " VND");
         System.out.println("Total revenue: " + coffeeShop.getTotalRevenue() + " VND");
     }
