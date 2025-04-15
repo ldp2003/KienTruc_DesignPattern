@@ -6,6 +6,8 @@ router.get('/', async (req, res) => {
     try {
         const products = await Product.find();
         res.json(products);
+        
+        // res.status(500).json({ message: 'intended error' });
     } catch (err) {
         res.status(500).json({ message: err.message });
     }

@@ -6,8 +6,7 @@ const testAddCustomer = async () => {
             name: 'John Doe',
             address: '123 Main St',
             phone: '555-555-5555',
-            email: 'johndoe123@gmail.com',
-            address: '123 Main St',
+            email: 'johndoe14232323@gmail.com',
         })
         console.log(response.data);
     } catch (error) {

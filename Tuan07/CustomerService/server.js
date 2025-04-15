@@ -20,7 +20,9 @@ db.once('open', () => {
 
 const customerRoutes = require('./routes/customerRoutes');
 app.use('/api/customers', customerRoutes);
-
+app.get('/health', (req, res) => {
+    res.json({ status: 'OK' });
+});
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {

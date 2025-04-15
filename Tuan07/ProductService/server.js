@@ -21,7 +21,9 @@ db.once('open', () => {
 
 const productRoutes = require('./routes/productRoutes');
 app.use('/api/products', productRoutes);
-
+app.get('/health', (req, res) => {
+    res.json({ status: 'OK' });
+});
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);

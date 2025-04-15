@@ -28,14 +28,9 @@ router.get('/:id', async (req, res) => {
 
 // Create customer
 router.post('/', async (req, res) => {
-    const customer = new Customer({
-        name: req.body.name,
-        address: req.body.address,
-        phone: req.body.phone,
-        email: req.body.email
-    });
-
     try {
+        console.log('Received customer creation request:', req.body);
+        const customer = new Customer(req.body);
         const newCustomer = await customer.save();
         res.status(201).json(newCustomer);
     } catch (err) {
